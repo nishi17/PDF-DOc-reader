@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">PdfDocReader</string>
 
+
+    <string name="open_pdf_from_assert">Open PDF from Assert</string>
+    <string name="open_pdf_from_storage">Open PDF from Storage</string>
+    <string name="open_online_pdf_webview">Open Online PDF Webview</string>
     <string name="open_doc_file_other_app">doc from other app</string>
+
 </resources>

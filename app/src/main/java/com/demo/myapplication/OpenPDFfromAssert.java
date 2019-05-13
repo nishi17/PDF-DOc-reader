@@ -2,7 +2,6 @@ package com.demo.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -16,12 +15,10 @@ import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 import com.github.barteksc.pdfviewer.listener.OnPageErrorListener;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 
-import java.io.File;
-
-public class MainActivity extends AppCompatActivity implements OnPageChangeListener, OnLoadCompleteListener,
+public class OpenPDFfromAssert extends AppCompatActivity implements OnPageChangeListener, OnLoadCompleteListener,
         OnPageErrorListener {
 
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = OpenPDFfromAssert.class.getSimpleName();
     public static final String SAMPLE_FILE = "pdffile.pdf";
     PDFView pdfView;
     Integer pageNumber = 0;
@@ -41,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements OnPageChangeListe
 
 
     private void displayFromAsset(String assetFileName) {
+
         pdfFileName = assetFileName;
 
         setTitle(pdfFileName);
@@ -55,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements OnPageChangeListe
                 .onPageError(this)
                 /*.pageFitPolicy(FitPolicy.BOTH)*/
                 .load();
+
     }
 
     @Override
@@ -97,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements OnPageChangeListe
         switch (id) {
             case R.id.open_doc_file_other_app:
 
-                Intent intent = new Intent(MainActivity.this, open_doc_file_other_app.class);
+                Intent intent = new Intent(OpenPDFfromAssert.this, Open_doc_file_other_app.class);
                 startActivity(intent);
                 //Toast.makeText(getApplicationContext(), "Item 1 Selected", Toast.LENGTH_LONG).show();
                 return true;

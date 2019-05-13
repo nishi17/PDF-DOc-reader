@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.demo.myapplication">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -12,14 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".open_doc_file_other_app"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".OpenOnlinePdfWebview"></activity>
+        <activity android:name=".OpenPdfFromStorage" />
+        <activity android:name=".OpenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Open_doc_file_other_app" />
+        <activity android:name=".OpenPDFfromAssert" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -30,18 +34,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
         </provider>
-
-        <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.demo.myapplication.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/filepaths" />
-        </provider>
-
     </application>
-
 
 </manifest>

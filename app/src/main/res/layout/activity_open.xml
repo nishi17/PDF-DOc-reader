@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OpenActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_open_pdf_from_assert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/open_pdf_from_assert"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+
+            <Button
+                android:id="@+id/bt_open_pdf_from_storage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/open_pdf_from_storage"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+            <Button
+                android:id="@+id/open_online_pdf_webview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/open_online_pdf_webview"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+
+            <Button
+                android:id="@+id/bt_open_doc_from_assert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/open_doc_file_other_app"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

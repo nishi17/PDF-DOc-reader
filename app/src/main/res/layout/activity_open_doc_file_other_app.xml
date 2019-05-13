@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".open_doc_file_other_app">
+    tools:context=".Open_doc_file_other_app">
 
     <WebView
         android:id="@+id/webview1"
