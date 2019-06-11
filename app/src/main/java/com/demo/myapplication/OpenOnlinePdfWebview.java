@@ -17,7 +17,7 @@ public class OpenOnlinePdfWebview extends AppCompatActivity {
 
     private WebView webView;
     private ProgressBar progressbar;
-    String filename = "http://www3.nd.edu/~cpoellab/teaching/cse40816/android_tutorial.pdf";
+    private String filename = "http://www3.nd.edu/~cpoellab/teaching/cse40816/android_tutorial.pdf";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +82,7 @@ public class OpenOnlinePdfWebview extends AppCompatActivity {
                 super.onReceivedSslError(view, null, error);
             }
         }
+
     }
 
 }
